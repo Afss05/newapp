@@ -4,8 +4,8 @@ import Header from "../components/layouts/Header";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  description: "Next.js Admin Panel",
+  title: "Grocery Admin",
+  description: "Groceries Management Admin Panel",
 };
 
 export default function RootLayout({
@@ -15,12 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="flex min-h-screen bg-gray-100">
+      <body className="bg-gray-50" suppressHydrationWarning>
+        <div className="flex min-h-screen">
           <Sidebar />
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col">
             <Header />
-            <main className="p-4">{children}</main>
+            <main className="flex-1 p-6 bg-gray-50">{children}</main>
           </div>
         </div>
       </body>
