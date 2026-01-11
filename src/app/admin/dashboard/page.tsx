@@ -1,3 +1,5 @@
+import "../../globals.css";
+
 export default function Dashboard() {
   const stats = [
     { title: "Total Vendors", value: "124" },
